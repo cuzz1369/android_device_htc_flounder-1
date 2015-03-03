@@ -2,6 +2,14 @@
 TARGET_SCREEN_HEIGHT := 2048
 TARGET_SCREEN_WIDTH := 1536
 
+# Some common sabermod variables before common
+
+O3_OPTIMIZATIONS := true
+TARGET_SM_KERNEL := SM-4.9
+TARGET_SM_AND := 4.9
+TARGET_ARCH := arm64
+ENABLE_PTHREAD := true
+
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
@@ -10,6 +18,8 @@ $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/htc/flounder/aosp_flounder.mk)
+
+
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := flounder
